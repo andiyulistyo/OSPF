@@ -1,57 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
         <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="AWAL"
-                android:id="@+id/textView"/>
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AWAL" />
+
         <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinnerAwal" android:spinnerMode="dialog"/>
+            android:id="@+id/spinnerAwal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog" />
     </LinearLayout>
+
     <LinearLayout
-            android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
-        <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+
             <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TUJUAN"
-                    android:id="@+id/textView1"/>
-            <Spinner
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/spinnerTujuan" android:layout_column="1" android:spinnerMode="dialog"/>
-        </LinearLayout>
-        <Button
-                android:layout_width="match_parent"
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cek COST"
-                android:id="@+id/buttonCheckCost" android:layout_column="0" android:layout_span="2"/>
+                android:text="TUJUAN" />
+
+            <Spinner
+                android:id="@+id/spinnerTujuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:spinnerMode="dialog" />
+        </LinearLayout>
+
+        <com.cengalabs.flatui.views.FlatButton
+            flatui:theme="Sky"
+            android:id="@+id/buttonCheckCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_span="2"
+            android:text="Cek COST" />
+
         <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
             <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="COST"
-                    android:id="@+id/textView2"/>
-            <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/editTextCost"/>
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COST" />
+
+            <com.cengalabs.flatui.views.FlatEditText
+                flatui:theme="Sky"
+                android:id="@+id/editTextCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

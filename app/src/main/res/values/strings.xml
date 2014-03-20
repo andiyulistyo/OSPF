@@ -5,6 +5,19 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="Selanjutnya">Selanjutnya</string>
-    <string name="namarouter">Nama Router</string>
 
+    <string name="namarouter">Input Nama Router</string>
+    <string name="inputNama">Input Nama Router</string>
+    <string name="selanjutnya">selanjutnya</string>
+    <string name="namarouternya">Nama Router</string>
+    <string name="bandwith">Input Bandwith</string>
+    <string name="hintIP">Input IP</string>
+    <string name="hintSubnet">Input Subnet</string>
+    <string name="inputdetail">Input Detail Router</string>
+    <string name="routername">Nama Router</string>
+    <string name="routerbandiwith">Bandiwith Router :</string>
+    <string name="inputsubnet">Input Subnet</string>
+    <string name="hasilospf">Tampilkan Hasil OSPF</string>
+    <string name="interfaceshow">Tampilkan IP Interface</string>
+    <string name="cost">Hitung COST</string>
 </resources>

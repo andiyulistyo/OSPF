@@ -1,46 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:padding="10dp"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Router"
-                android:id="@+id/textView"/>
-        <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinnerOSPFInterface"/>
-    </LinearLayout>
-    <Button
-            android:layout_width="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.cengalabs.flatui.views.FlatTextView
+            flatui:theme="Sky"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="OSPF INTERFACE"
-            android:id="@+id/buttonOSPFInterface"/>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ketersediaan Bandwidth"
-                android:id="@+id/textView1" android:layout_gravity="left|center_vertical"/>
-        <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editTextOSPFInterface"/>
+            android:text="Router" />
+
+        <Spinner
+            android:id="@+id/spinnerOSPFInterface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-                  android:id="@+id/linearLayout">
-        <TextView android:paddingTop="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Informasi"
-                  android:id="@+id/textViewInformasiOSPF" android:layout_gravity="left|center_vertical"/>
+
+    <com.cengalabs.flatui.views.FlatButton
+        flatui:theme="Sky"
+        android:id="@+id/buttonOSPFInterface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OSPF INTERFACE" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.cengalabs.flatui.views.FlatTextView
+            flatui:theme="Sky"
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:text="Ketersediaan Bandwidth" />
+
+        <com.cengalabs.flatui.views.FlatEditText
+            flatui:theme="Sky"
+            android:id="@+id/editTextOSPFInterface"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.cengalabs.flatui.views.FlatTextView
+            flatui:theme="Sky"
+            android:id="@+id/textViewInformasiOSPF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:paddingTop="10dp"
+            android:text="Informasi" />
     </LinearLayout>
 </LinearLayout>
