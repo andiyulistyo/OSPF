@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:flatui="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <com.cengalabs.flatui.views.FlatEditText
-            flatui:theme="Sky"
-            android:hint="@string/namarouter"
-            android:textColor="@android:color/black"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editTextNamaRouter"/>
+        android:layout_marginTop="10dp"
+        android:id="@+id/editTextNamaRouter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/namarouter"
+        android:textColor="@android:color/black"
+        flatui:theme="Sky" />
 </LinearLayout>

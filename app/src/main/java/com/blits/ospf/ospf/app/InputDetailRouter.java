@@ -164,7 +164,4 @@ public class InputDetailRouter extends ListActivity implements View.OnClickListe
         }
     }
 
-    public static List<Short> getBandwidthList() {
-        return bandwidthList;
-    }
 }
