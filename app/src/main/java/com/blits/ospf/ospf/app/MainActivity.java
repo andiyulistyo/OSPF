@@ -1,11 +1,13 @@
 package com.blits.ospf.ospf.app;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.devspark.appmsg.AppMsg;
 
@@ -14,6 +16,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     private EditText editTextInput;
     private Button buttonNext;
+    private TextView textView;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         editTextInput = (EditText) findViewById(R.id.editTextInputRouter);
         buttonNext = (Button) findViewById(R.id.buttonSelanjutnyaInputRouter);
+
+        textView = (TextView) findViewById(R.id.texxx);
+
         buttonNext.setOnClickListener(this);
     }
 
@@ -41,6 +48,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
             // pass ke class selanjutnya
             Intent intent = new Intent(getApplication(), NamaRouter.class);
+
             intent.putExtra("router", router);
             startActivity(intent);
         }

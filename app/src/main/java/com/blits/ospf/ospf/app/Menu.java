@@ -2,24 +2,43 @@ package com.blits.ospf.ospf.app;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.LightingColorFilter;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 public class Menu extends Activity implements View.OnClickListener {
 
+    Button buttonCost, buttonIPShow, buttonOSPF, buttonBaru;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pilih_menu);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Button buttonCost = (Button) findViewById(R.id.buttonCost);
-        Button buttonIPShow = (Button) findViewById(R.id.buttonIPInterface);
-        Button buttonOSPF = (Button) findViewById(R.id.buttonOSPF);
+        buttonBaru = (Button) findViewById(R.id.buttonBaru);
+        buttonCost = (Button) findViewById(R.id.buttonCost);
+        buttonIPShow = (Button) findViewById(R.id.buttonIPInterface);
+        buttonOSPF = (Button) findViewById(R.id.buttonOSPF);
 
         buttonOSPF.setOnClickListener(this);
         buttonIPShow.setOnClickListener(this);
         buttonCost.setOnClickListener(this);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home :
+                onBackPressed();
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return true;
     }
 
     @Override

@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
@@ -14,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.blits.ospf.ospf.app.InputDetailRouter;
 import com.blits.ospf.ospf.app.R;
 
 import java.util.ArrayList;
@@ -24,7 +27,10 @@ import java.util.HashMap;
  */
 public class InputDetailRouterAdapter extends BaseAdapter {
 
-    private ArrayList<String> listNama = new ArrayList<>();
+    private Animation animationOut;
+    private Animation animationIn;
+
+    private ArrayList<String> listNama = new ArrayList<String>();
     private Context mContext;
     private LayoutInflater layoutInflater;
     public HashMap<Integer, Integer> spinnerFA0;
@@ -91,6 +97,9 @@ public class InputDetailRouterAdapter extends BaseAdapter {
             holder = new ViewHolder();
             view = layoutInflater.inflate(R.layout.item_input_detail_router, viewGroup, false);
 
+            animationIn = AnimationUtils.loadAnimation(mContext, R.anim.slide_down);
+            animationOut = AnimationUtils.loadAnimation(mContext, R.anim.slide_up);
+
             holder.textViewNama = (TextView) view.findViewById(R.id.textViewNama);
             holder.editTextBandwith = (EditText) view.findViewById(R.id.editTextBandwith);
 
@@ -140,7 +149,24 @@ public class InputDetailRouterAdapter extends BaseAdapter {
 
                     // check layout hide atau gak
                     if (holder.layoutFA0.getVisibility() == View.GONE) {
-                        holder.layoutFA0.setVisibility(View.VISIBLE);
+                        animationOut.setAnimationListener(new Animation.AnimationListener() {
+                            @Override
+                            public void onAnimationStart(Animation animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animation animation) {
+
+                                holder.layoutFA0.setVisibility(View.VISIBLE);
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animation animation) {
+
+                            }
+                        });
+                        holder.layoutFA0.setAnimation(animationOut);
                     } else holder.layoutFA0.setVisibility(View.GONE);
                 }
             });

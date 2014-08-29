@@ -3,18 +3,25 @@ package com.blits.ospf.ospf.app;
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.*;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
+
 import com.blits.ospf.ospf.app.adapter.InputDetailRouterAdapter;
 
 public class InterfaceActivity extends Activity implements View.OnClickListener {
 
     private Spinner spinner;
     private TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_interface);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
 
         Button button = (Button) findViewById(R.id.buttonShowIp);
         spinner = (Spinner) findViewById(R.id.spinnerInterface);
@@ -22,7 +29,7 @@ public class InterfaceActivity extends Activity implements View.OnClickListener 
 
         button.setOnClickListener(this);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, InputDetailRouter.namaRouter);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, InputDetailRouter.namaRouter);
         spinner.setAdapter(adapter);
     }
 
@@ -43,25 +50,37 @@ public class InterfaceActivity extends Activity implements View.OnClickListener 
         String routerFA0, routerFA1, routerSE0, routerSE1;
 
         if (checkBoxFA0) {
-            routerFA0 = "terhubung dengan router "+InputDetailRouterAdapter.spinnerFA0Selected.get(selectedItemPosition);
+            routerFA0 = "terhubung dengan router " + InputDetailRouterAdapter.spinnerFA0Selected.get(selectedItemPosition);
         } else routerFA0 = "ini tidak digunakan";
 
         if (checkBoxFA1) {
-            routerFA1 = "terhubung dengan router "+InputDetailRouterAdapter.spinnerFA1Selected.get(selectedItemPosition);
+            routerFA1 = "terhubung dengan router " + InputDetailRouterAdapter.spinnerFA1Selected.get(selectedItemPosition);
         } else routerFA1 = "ini tidak digunakan";
 
         if (checkBoxSE0) {
-            routerSE0 = "terhubung dengan router "+InputDetailRouterAdapter.spinnerSE0Selected.get(selectedItemPosition);
+            routerSE0 = "terhubung dengan router " + InputDetailRouterAdapter.spinnerSE0Selected.get(selectedItemPosition);
         } else routerSE0 = " ini tidak digunakan";
 
         if (checkBoxSE1) {
-            routerSE1 = "terhubung dengan router "+InputDetailRouterAdapter.spinnerSE1Selected.get(selectedItemPosition);
+            routerSE1 = "terhubung dengan router " + InputDetailRouterAdapter.spinnerSE1Selected.get(selectedItemPosition);
         } else routerSE1 = " ini tidak digunakan";
 
-        textView.setText(Html.fromHtml("<h1>Configurasi Router <b>"+nameRouter+"</b></h1> " +
-                "<br>PORT FA0 <b>"+routerFA0+"</b> <br>" +
-                "<br>PORT FA1 <b>"+routerFA1+"</b> <br> " +
-                "<br>PORT SEO <b>"+routerSE0+"</b> <br>" +
-                "<br>PORT SE1 <b>"+routerSE1+"</b> <br>"));
+        textView.setText(Html.fromHtml("<h1>Configurasi Router <b>" + nameRouter + "</b></h1> " +
+                "<br>PORT FA0 <b>" + routerFA0 + "</b> <br>" +
+                "<br>PORT FA1 <b>" + routerFA1 + "</b> <br> " +
+                "<br>PORT SEO <b>" + routerSE0 + "</b> <br>" +
+                "<br>PORT SE1 <b>" + routerSE1 + "</b> <br>"));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return true;
     }
 }

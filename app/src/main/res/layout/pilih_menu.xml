@@ -4,36 +4,82 @@
     xmlns:flatui="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    android:padding="25dp">
+    android:background="#eff4f8"
+    android:orientation="vertical">
 
-    <com.cengalabs.flatui.views.FlatButton
-        android:id="@+id/buttonOSPF"
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="#4199d9"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="blab.ttf"
+            android:padding="15dp"
+            android:text="OSPF Menu"
+            android:textColor="#ffffffff"
+            android:textSize="60dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:text="Pilihlah salah satu menu dibawah ini :"
+            android:textColor="#ffffffff"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/buttonBaru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hitung Baru" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/hasilospf"
-        flatui:theme="Sky" />
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
 
-    <com.cengalabs.flatui.views.FlatButton
-        android:layout_marginTop="10dp"
-        android:id="@+id/buttonIPInterface"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/interfaceshow"
-        flatui:theme="Sky" />
+        <com.cengalabs.flatui.views.FlatButton
+            android:id="@+id/buttonOSPF"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/hasilospf"
+            android:typeface="monospace"
+            flatui:theme="Sea" />
 
-    <com.cengalabs.flatui.views.FlatButton
-        android:layout_marginTop="10dp"
-        android:id="@+id/buttonCost"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/cost"
-        flatui:theme="Sky" />
+        <com.cengalabs.flatui.views.FlatButton
+            android:id="@+id/buttonIPInterface"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/interfaceshow"
+            android:typeface="monospace"
+            flatui:theme="Sky" />
+
+        <com.cengalabs.flatui.views.FlatButton
+            android:id="@+id/buttonCost"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/cost"
+            android:typeface="monospace"
+            flatui:theme="Orange" />
+
+    </LinearLayout>
 </LinearLayout>

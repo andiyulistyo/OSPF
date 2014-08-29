@@ -25,9 +25,7 @@ public class Cost extends Activity implements View.OnClickListener {
 
         buttonCheckHasil.setOnClickListener(this);
 
-        Log.i("bandiwidth size", bandwidthList.size()+"");
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, namaRouter);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, namaRouter);
         spinnerAwal.setAdapter(adapter);
         spinnerTujuan.setAdapter(adapter);
     }

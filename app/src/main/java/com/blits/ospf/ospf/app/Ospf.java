@@ -26,7 +26,7 @@ public class Ospf extends Activity implements View.OnClickListener {
 
         button.setOnClickListener(this);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, InputDetailRouter.namaRouter);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, InputDetailRouter.namaRouter);
         spinnerRouter.setAdapter(adapter);
     }
 

@@ -12,11 +12,13 @@
     android:padding="10dp">
 
     <LinearLayout
+        android:background="#ff41ff25"
+        android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <com.cengalabs.flatui.views.FlatTextView
-            flatui:theme="Sky"
+        <TextView
+            android:textSize="30dp"
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,15 +30,16 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <com.cengalabs.flatui.views.FlatButton
+    <Button
         android:layout_marginTop="10dp"
-        flatui:theme="Sky"
+        android:background="#ff4f5dff"
         android:id="@+id/buttonOSPFInterface"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="OSPF INTERFACE" />
 
     <LinearLayout
+        android:background="#ffffff"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">

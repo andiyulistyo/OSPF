@@ -21,8 +21,8 @@ public class InputDetailRouter extends ListActivity implements View.OnClickListe
     public static ArrayList<String> namaRouter;
 
     public static int matrix[][];
-    public static List<Short> bandwidthList = new ArrayList<>();
-    public static List<Short> spinnerFA0 = new ArrayList<>();
+    public static List<Short> bandwidthList = new ArrayList<Short>();
+    public static List<Short> spinnerFA0 = new ArrayList<Short>();
 
 
     @Override

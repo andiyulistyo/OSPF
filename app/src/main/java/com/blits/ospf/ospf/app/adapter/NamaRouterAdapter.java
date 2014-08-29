@@ -15,11 +15,11 @@ import java.util.List;
 
 public class NamaRouterAdapter extends BaseAdapter {
 
-    private List<String> nama = new ArrayList<>();
+    private List<String> nama = new ArrayList<String>();
     private Context context;
     private LayoutInflater layoutInflater;
 
-    public HashMap<Integer, String> hashMap = new HashMap<>();
+    public HashMap<Integer, String> hashMap = new HashMap<Integer, String>();
 
 
     public NamaRouterAdapter(List<String> nama, Context mcontext) {

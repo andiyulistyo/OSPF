@@ -27,7 +27,7 @@ public class NamaRouter extends ListActivity implements View.OnClickListener {
         @SuppressWarnings("ConstantConditions") int router = getIntent().getExtras().getInt("router");
 
         // buat hint
-        List<String> nama = new ArrayList<>();
+        List<String> nama = new ArrayList<String>();
 
         for (int i = 0; i < router; i++) {
             nama.add("Nama Router ke : "+i);
