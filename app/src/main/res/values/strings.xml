@@ -20,4 +20,5 @@
     <string name="hasilospf">Tampilkan Hasil OSPF</string>
     <string name="interfaceshow">Tampilkan IP Interface</string>
     <string name="cost">Hitung COST</string>
+    <string name="n">Next</string>
 </resources>

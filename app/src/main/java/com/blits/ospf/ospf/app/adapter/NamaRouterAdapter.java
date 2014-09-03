@@ -50,24 +50,19 @@ public class NamaRouterAdapter extends BaseAdapter {
         if (view == null) {
             viewHold = new ViewHold();
             view = layoutInflater.inflate(R.layout.item_input_nama_router, viewGroup, false);
-
-            viewHold.editTextNama = (EditText) (view != null ? view.findViewById(R.id.editTextNamaRouter) : null);
-
+            viewHold.editTextNama = (EditText) view.findViewById(R.id.editTextNamaRouter);
             if (view != null) {
                 view.setTag(viewHold);
             }
-
         } else viewHold = (ViewHold) view.getTag();
 
-
         if (hashMap.isEmpty()) {
-            viewHold.editTextNama.setText("");
-        } viewHold.editTextNama.setText(hashMap.get(position));
-
+//            viewHold.editTextNama.setText("");
+            viewHold.editTextNama.setHint(nama.get(position));
+        }
+        viewHold.editTextNama.setText(hashMap.get(position));
         viewHold.editTextNama.setId(position);
-
         viewHold.editTextNama.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @SuppressWarnings("ConstantConditions")
             @Override
             public void onFocusChange(View view, boolean b) {
                 if (!b) {
@@ -75,7 +70,6 @@ public class NamaRouterAdapter extends BaseAdapter {
                 }
             }
         });
-
         return view;
     }
 

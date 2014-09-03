@@ -1,9 +1,10 @@
 package com.blits.ospf.ospf.app;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Typeface;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 import com.devspark.appmsg.AppMsg;
 
 
-public class MainActivity extends ActionBarActivity implements View.OnClickListener {
+public class MainActivity extends Activity implements View.OnClickListener {
 
     private EditText editTextInput;
     private Button buttonNext;
@@ -59,4 +60,5 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         super.onResume();
         AppMsg.cancelAll();
     }
+
 }
