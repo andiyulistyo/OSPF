@@ -8,19 +8,35 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light">
         <activity
-            android:theme="@style/ThemeFirst"
             android:name="com.blits.ospf.ospf.app.MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/ThemeFirst">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NamaRouter" android:label="@string/inputNama" android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".InputDetailRouter" android:label="@string/inputdetail" android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".Cost" android:label="Informasi Cost Router"/>
-        <activity android:name=".InterfaceActivity" android:label="Informasi Interface Router"/>
-        <activity android:name=".Ospf" android:label="Informasi OSPF"/>
-        <activity android:name=".Menu" android:label="Menu Pilihan"/>
+        <activity
+            android:name=".NamaRouter"
+            android:label="@string/inputNama"
+            android:theme="@style/ThemeTwo"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".InputDetailRouter"
+            android:label="@string/inputdetail"
+            android:theme="@style/ThemeTwo"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Cost"
+            android:label="Informasi Cost Router" />
+        <activity
+            android:name=".InterfaceActivity"
+            android:label="Informasi Interface Router" />
+        <activity
+            android:name=".Ospf"
+            android:label="Informasi OSPF" />
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name=".Menu" />
     </application>
 </manifest>

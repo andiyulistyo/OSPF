@@ -149,24 +149,7 @@ public class InputDetailRouterAdapter extends BaseAdapter {
 
                     // check layout hide atau gak
                     if (holder.layoutFA0.getVisibility() == View.GONE) {
-                        animationOut.setAnimationListener(new Animation.AnimationListener() {
-                            @Override
-                            public void onAnimationStart(Animation animation) {
-
-                            }
-
-                            @Override
-                            public void onAnimationEnd(Animation animation) {
-
-                                holder.layoutFA0.setVisibility(View.VISIBLE);
-                            }
-
-                            @Override
-                            public void onAnimationRepeat(Animation animation) {
-
-                            }
-                        });
-                        holder.layoutFA0.setAnimation(animationOut);
+                        holder.layoutFA0.setVisibility(View.VISIBLE);
                     } else holder.layoutFA0.setVisibility(View.GONE);
                 }
             });
@@ -191,7 +174,7 @@ public class InputDetailRouterAdapter extends BaseAdapter {
                 }
             });
 
-            // check checkbox se03
+            // check checkbox se0
             holder.checkBoxSe0.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
