@@ -8,6 +8,7 @@
 
 
     <com.cengalabs.flatui.views.FlatTextView
+        android:textSize="30dp"
         flatui:theme="Sky"
         android:id="@+id/textViewNama"
         android:layout_width="match_parent"
